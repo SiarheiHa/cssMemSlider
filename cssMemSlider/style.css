@@ -1,14 +1,21 @@
+:root {
+  --color-navigation: #71abfe;
+  --color-navigation-hover: #FFFFFF;
+  --color-background: #000;
+}
+
 * {
   box-sizing: border-box;
-}
- 
-body {
   margin: 0;
   padding: 0;
 }
 
+body {
+  background-color: var(--color-background);
+}
+ 
 .wrapper {
-  max-width: 1000px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -17,6 +24,8 @@ body {
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .slider {
@@ -25,13 +34,17 @@ body {
   align-items: center;
   width: 60%;
   overflow: hidden;
+  border: 0.2rem solid white;
+}
+
+input {
+  display: none;
 }
 
 .slider-images {
   display: flex;
   align-self: start;
   width: 400%;
-  background-color: aqua;
   transition: all .5s ease;
 }
 .slider-image {
@@ -47,9 +60,11 @@ body {
 .slider-nav-text-wrapper {
   display: flex;
   width: 100%;
+  padding: 3rem 0;
+  border-top: 0.2rem solid white;
 }
 .slider-textes-wrapper {
-  flex-basis: 50%;
+  flex-basis: 70%;
   overflow: hidden;
 }
 
@@ -60,18 +75,31 @@ body {
 }
 .slider-textes-text {
   width: 25%;
+  font-size: 2rem;
+  color: var(--color-navigation-hover);
 }
 .slider-nav {
-  flex-basis: 50%;
+  flex-basis: 30%;
   display: flex;
-  justify-content: center;
+  justify-content: end;
+  align-items: center;
+}
+.label {
+  cursor: pointer;;
+}
+.label:hover .slider-nav-btn {
+  background-color: var(--color-navigation-hover);
+  border-color: var(--color-navigation-hover);
 }
 
 .slider-nav-btn {
-  width: 20px;
-  height: 20px;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 100%;
-  background-color: blue;
+  border: 0.2rem solid var(--color-navigation);
+  background-color: var(--color-navigation);
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 
@@ -79,7 +107,7 @@ body {
 #slide-1:checked~.slider-nav-text-wrapper .slider-nav [for="slide-1"] .slider-nav-btn,
 #slide-2:checked~.slider-nav-text-wrapper .slider-nav [for="slide-2"] .slider-nav-btn,
 #slide-3:checked~.slider-nav-text-wrapper .slider-nav [for="slide-3"] .slider-nav-btn {
-  background-color: brown;
+  background-color: transparent;
 }
 
 /*  */
