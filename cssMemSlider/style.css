@@ -1,4 +1,112 @@
 * {
   box-sizing: border-box;
 }
+ 
+body {
+  margin: 0;
+  padding: 0;
+}
 
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  overflow: hidden;
+}
+
+.slider-images {
+  display: flex;
+  align-self: start;
+  width: 400%;
+  background-color: aqua;
+  transition: all .5s ease;
+}
+.slider-image {
+  width: 25%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.slider-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.slider-nav-text-wrapper {
+  display: flex;
+  width: 100%;
+}
+.slider-textes-wrapper {
+  flex-basis: 50%;
+  overflow: hidden;
+}
+
+.slider-textes {
+  display: flex;
+  width: 400%;
+  transition: all .5s ease;
+}
+.slider-textes-text {
+  width: 25%;
+}
+.slider-nav {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.slider-nav-btn {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: blue;
+}
+
+
+#slide-0:checked~.slider-nav-text-wrapper .slider-nav [for="slide-0"] .slider-nav-btn,
+#slide-1:checked~.slider-nav-text-wrapper .slider-nav [for="slide-1"] .slider-nav-btn,
+#slide-2:checked~.slider-nav-text-wrapper .slider-nav [for="slide-2"] .slider-nav-btn,
+#slide-3:checked~.slider-nav-text-wrapper .slider-nav [for="slide-3"] .slider-nav-btn {
+  background-color: brown;
+}
+
+/*  */
+#slide-0:checked~.slider-nav-text-wrapper .slider-textes-wrapper .slider-textes {
+  transform: translateX(-0%);
+}
+#slide-1:checked~.slider-nav-text-wrapper .slider-textes-wrapper .slider-textes{
+  transform: translateX(-25%);
+}
+#slide-2:checked~.slider-nav-text-wrapper .slider-textes-wrapper .slider-textes{
+  transform: translateX(-50%);
+}
+#slide-3:checked~.slider-nav-text-wrapper .slider-textes-wrapper .slider-textes{
+  transform: translateX(-75%);
+}
+
+/*  */
+
+#slide-0:checked~.slider-images {
+  transform: translateX(-0%);
+}
+#slide-1:checked~.slider-images {
+  transform: translateX(-25%);
+}
+#slide-2:checked~.slider-images {
+  transform: translateX(-50%);
+}
+#slide-3:checked~.slider-images {
+  transform: translateX(-75%);
+}
