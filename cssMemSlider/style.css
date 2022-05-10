@@ -33,7 +33,7 @@ body {
 .slider {
   overflow: hidden;
 
-  width: 64%;
+  width: 56%;
 
   border: 0.2rem solid var(--color-light);
   border-radius: 3%;
