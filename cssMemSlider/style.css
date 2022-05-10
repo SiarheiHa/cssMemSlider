@@ -1,7 +1,7 @@
 :root {
   --color-navigation: #71abfe;
-  --color-light: #FFFFFF;
-  --color-background: #000;
+  --color-light: #ffffff;
+  --color-background: #000000;
   --color-body: #340a48;
 }
 
@@ -14,7 +14,7 @@
 body {
   background-color: var(--color-body);
 }
- 
+
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
@@ -22,23 +22,22 @@ body {
 
 .slider-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  overflow: hidden;
+  flex-direction: column;
+
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
 
+
 .slider {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 65%;
   overflow: hidden;
+
+  width: 64%;
+
+  border: 0.2rem solid var(--color-light);
   border-radius: 3%;
   background-color: var(--color-background);
-  border: 0.2rem solid var(--color-light);
-  
 }
 
 input {
@@ -48,65 +47,77 @@ input {
 .slider-images {
   display: flex;
   align-self: start;
+
   width: 400%;
-  transition: all .5s ease;
+
+  transition: all 0.5s ease;
 }
+
 .slider-image {
   width: 25%;
-  background-repeat: no-repeat;
-  background-size: contain;
 }
+
 .slider-image img {
   width: 100%;
   height: 100%;
+
   border-radius: 3%;
 }
 
 .slider-nav-text-wrapper {
   display: flex;
-  width: 100%;
+
   padding: 3rem 0;
 }
 
 .slider-textes-wrapper {
-  padding: 1rem 0;
-  flex-basis: 70%;
   overflow: hidden;
+
+  padding: 1rem 0;
 }
 
 .slider-textes {
   display: flex;
+
   width: 400%;
-  transition: all .5s ease;
+
+  transition: all 0.5s ease;
 }
+
 .slider-textes-text {
   width: 25%;
-  font-size: 2rem;
-  font-family: sans-serif;
+  padding: 0 0.5rem;
+
   color: var(--color-light);
-  padding: 0 0.5rem
+
+  font-family: sans-serif;
+  font-size: 2rem;
 }
+
 .slider-nav {
-  flex-basis: 30%;
   display: flex;
-  justify-content: end;
   align-items: center;
+  flex-basis: 30%;
+  justify-content: end;
 }
+
 .label {
-  cursor: pointer;;
+  cursor: pointer;
 }
+
 .label:hover .slider-nav-btn {
-  background-color: var(--color-light);
   border-color: var(--color-light);
+  background-color: var(--color-light);
 }
 
 .slider-nav-btn {
   width: 1.5rem;
   height: 1.5rem;
-  border-radius: 100%;
-  border: 0.2rem solid var(--color-navigation);
-  background-color: var(--color-navigation);
   margin: 0.5rem;
+
+  border: 0.2rem solid var(--color-navigation);
+  border-radius: 100%;
+  background-color: var(--color-navigation);
 }
 
 
@@ -147,14 +158,18 @@ input {
   .slider {
     width: 90%;
   }
-  .slider-nav-text-wrapper {   
-    padding: 1rem 0; 
+
+  .slider-nav-text-wrapper {
     flex-direction: column-reverse;
-    justify-content: center;    
+    justify-content: center;
+
+    padding: 1rem 0;
   }
+
   .slider-textes-text {
     font-size: 5vw;
   }
+
   .slider-nav {
     justify-content: center;
   }
