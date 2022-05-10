@@ -1,6 +1,6 @@
 :root {
   --color-navigation: #71abfe;
-  --color-navigation-hover: #FFFFFF;
+  --color-light: #FFFFFF;
   --color-background: #000;
 }
 
@@ -32,7 +32,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 60%;
+  width: 65%;
   overflow: hidden;
   border: 0.2rem solid white;
 }
@@ -63,7 +63,9 @@ input {
   padding: 3rem 0;
   border-top: 0.2rem solid white;
 }
+
 .slider-textes-wrapper {
+  padding: 1rem 0;
   flex-basis: 70%;
   overflow: hidden;
 }
@@ -76,7 +78,9 @@ input {
 .slider-textes-text {
   width: 25%;
   font-size: 2rem;
-  color: var(--color-navigation-hover);
+  font-family: sans-serif;
+  color: var(--color-light);
+  padding: 0 0.5rem
 }
 .slider-nav {
   flex-basis: 30%;
@@ -88,8 +92,8 @@ input {
   cursor: pointer;;
 }
 .label:hover .slider-nav-btn {
-  background-color: var(--color-navigation-hover);
-  border-color: var(--color-navigation-hover);
+  background-color: var(--color-light);
+  border-color: var(--color-light);
 }
 
 .slider-nav-btn {
@@ -98,8 +102,7 @@ input {
   border-radius: 100%;
   border: 0.2rem solid var(--color-navigation);
   background-color: var(--color-navigation);
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  margin: 0.5rem;
 }
 
 
@@ -137,4 +140,21 @@ input {
 }
 #slide-3:checked~.slider-images {
   transform: translateX(-75%);
+}
+
+@media (max-width: 768px) {
+  .slider {
+    width: 90%;
+  }
+  .slider-nav-text-wrapper {   
+    padding: 1rem 0; 
+    flex-direction: column-reverse;
+    justify-content: center;    
+  }
+  .slider-textes-text {
+    font-size: 5vw;
+  }
+  .slider-nav {
+    justify-content: center;
+  }
 }
