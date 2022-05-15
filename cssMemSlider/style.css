@@ -41,6 +41,8 @@ body {
 }
 
 input {
+  -webkit-appearance: none;
+
   width: 0;
   height: 0;  
 }
@@ -122,36 +124,36 @@ input {
 }
 
 
-#slide-0:checked~.slider-nav-text-wrapper .slider-nav [for="slide-0"] .slider-nav-btn,
-#slide-1:checked~.slider-nav-text-wrapper .slider-nav [for="slide-1"] .slider-nav-btn,
-#slide-2:checked~.slider-nav-text-wrapper .slider-nav [for="slide-2"] .slider-nav-btn,
-#slide-3:checked~.slider-nav-text-wrapper .slider-nav [for="slide-3"] .slider-nav-btn {
+#slide-0:checked~.slider .slider-nav-text-wrapper .slider-nav [for="slide-0"] .slider-nav-btn,
+#slide-1:checked~.slider .slider-nav-text-wrapper .slider-nav [for="slide-1"] .slider-nav-btn,
+#slide-2:checked~.slider .slider-nav-text-wrapper .slider-nav [for="slide-2"] .slider-nav-btn,
+#slide-3:checked~.slider .slider-nav-text-wrapper .slider-nav [for="slide-3"] .slider-nav-btn {
   background-color: transparent;
-}
+}.slider 
 
-#slide-0:checked~.slider-nav-text-wrapper .slider-textes-wrapper .slider-textes {
+#slide-0:checked~.slider .slider-nav-text-wrapper .slider-textes-wrapper .slider-textes {
   transform: translateX(-0%);
 }
-#slide-1:checked~.slider-nav-text-wrapper .slider-textes-wrapper .slider-textes{
+#slide-1:checked~.slider .slider-nav-text-wrapper .slider-textes-wrapper .slider-textes{
   transform: translateX(-25%);
 }
-#slide-2:checked~.slider-nav-text-wrapper .slider-textes-wrapper .slider-textes{
+#slide-2:checked~.slider .slider-nav-text-wrapper .slider-textes-wrapper .slider-textes{
   transform: translateX(-50%);
 }
-#slide-3:checked~.slider-nav-text-wrapper .slider-textes-wrapper .slider-textes{
+#slide-3:checked~.slider .slider-nav-text-wrapper .slider-textes-wrapper .slider-textes{
   transform: translateX(-75%);
 }
 
-#slide-0:checked~.slider-images {
+#slide-0:checked~.slider .slider-images {
   transform: translateX(-0%);
 }
-#slide-1:checked~.slider-images {
+#slide-1:checked~.slider .slider-images {
   transform: translateX(-25%);
 }
-#slide-2:checked~.slider-images {
+#slide-2:checked~.slider .slider-images {
   transform: translateX(-50%);
 }
-#slide-3:checked~.slider-images {
+#slide-3:checked~.slider .slider-images {
   transform: translateX(-75%);
 }
 
